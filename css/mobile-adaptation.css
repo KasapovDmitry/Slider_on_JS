@@ -1,0 +1,113 @@
+/*
+// main1
+*/
+@media (max-width: 1023px) {
+    .tabs-row {
+        display: none;
+    }
+
+    .main1-row {
+        grid-template-columns: 1fr;
+        column-gap: 0px;
+        grid-template-areas: 'a'
+                             'b'
+                             'c';
+    }
+    .main1-top {
+        margin-bottom: 50px;
+    }
+    .main1-title {
+        text-align: center;
+        margin-bottom: 34px;
+    }
+    .main1-text {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .main1-text p {
+        max-width: 500px;
+        text-align: center;
+    }
+    .info {
+        margin-top: 35px;
+        margin-bottom: 50px;
+    }
+    .control-row {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+    }
+}
+
+@media (max-width: 767px) {
+    .main1 {
+        background-color: var(--color-black1);
+        padding: 35px 0px 60px;
+    }
+    .main1-row {
+        max-width: 100%;
+        width: 100%;
+    }
+    .control-row .dots {
+        display: none;
+    }
+    .info {
+        margin-bottom: 0px;
+    }
+    .control-row {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        bottom: auto;
+        transform: translateX(0%);
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 100%;
+        width: 100%;
+        margin: 0px 13px;
+    }
+    .arrow-pred,
+    .arrow-next {
+        width: 36px;
+        height: 36px;
+        background-color: var(--color-bej);
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .arrow-pred::before {
+        position: absolute;
+        content: url(../img/arr2-l.svg);
+    }
+    .arrow-next::before {
+        position: absolute;
+        content: url(../img/arr2-r.svg);
+    }
+    .arrow-next {
+        left: auto;
+        right: 30px;
+    }
+    .info-blok-title {
+        font-size: 11px;
+        line-height: 18px;
+    }
+    .info-blok-text {
+        font-size: 11px;
+        line-height: 18px;
+    }
+}
+
+@media (max-width: 425px) {
+    .control-row {
+        top: 60%;
+        transform: translateY(-50%);
+    }
+}
+

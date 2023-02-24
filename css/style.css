@@ -1,0 +1,431 @@
+/*
+// Переменные
+*/
+:root {
+    --color-black1: #131313;
+    --color-black2: #363636;
+    --color-black3: #181818;
+    --color-gray: #959595;
+    --color-white: white;
+    --color-bej: #E3B873;
+}
+
+/*
+// Обнуление стилей
+*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/*
+// Шрифты
+*/
+@font-face {
+    font-family: 'NunitoSans';
+    src: local('NunitoSans'), local('NunitoSans-Regular'),
+        url('../fonts/NunitoSans/NunitoSans-Regular.woff2') format('woff2'),
+        url('../fonts/NunitoSans/NunitoSans-Regular.woff') format('woff'),
+        url('../fonts/NunitoSans/NunitoSans-Regular.eot') format('embedded-opentype'),
+        url('../fonts/NunitoSans/NunitoSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'YesevaOne';
+    src: local('YesevaOne'), local('YesevaOne-Regular'),
+        url('../fonts/YesevaOne/YesevaOne-Regular.woff2') format('woff2'),
+        url('../fonts/YesevaOne/YesevaOne-Regular.woff') format('woff'),
+        url('../fonts/YesevaOne/YesevaOne-Regular.eot') format('embedded-opentype'),
+        url('../fonts/YesevaOne/YesevaOne-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*
+// Общие стили
+*/
+html {
+    box-sizing: border-box;
+}
+  
+*,
+*::before,
+*::after {
+box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    background-color: var(--color-white);
+    font-family: 'NunitoSans', sans-serif;
+    font-style: normal;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.error {
+    border: 2px #ff4019 solid !important;
+}
+
+.btn-reset {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.container-header {
+    max-width: 1286px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.container {
+    max-width: 1266px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.section-title {
+    font-family: 'YesevaOne';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+}
+.btn {
+    display: inline-block;
+    text-align: center;
+    background: var(--color-bej);
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+    border-radius: 2px;
+    color: var(--color-white);
+    transition: all 0.1s ease-in;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.main7-social:hover,
+.btn:hover {
+    box-shadow: 0px 0px 8px var(--color-bej);
+}
+.main7-social:active,
+.btn:active {
+    box-shadow: 0px 0px 4px var(--color-bej);
+}
+.btn1 {
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
+    border-radius: 2px;
+    background: inherit;
+}
+.btn1:hover {
+    box-shadow: 0px 0px 8px var(--color-white);
+    background: rgba(255, 255, 255, 0.3);
+}
+.btn1:active {
+    box-shadow: 0px 0px 4px var(--color-white);
+    background: rgba(255, 255, 255, 0.3);
+}
+/*
+// main
+*/
+.main {
+    background-color: var(--color-black1);
+    height: 100vh;
+}
+
+/*
+// main1
+*/
+
+.main1 {
+    background-color: var(--color-black1);
+    padding: 105px 0px 90px;
+}
+
+.main1-row {
+    position: relative;
+    height: 100%;
+}
+
+.tabs-row {
+    display: flex;
+    padding-bottom: 55px;
+    margin-left: 492px;
+}
+.main1-tab {
+    font-family: 'YesevaOne';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+    margin-right: 60px;
+    position: relative;
+    cursor: pointer;
+}
+.main1-tab:last-child {
+    margin-right: 0px;
+}
+.main1-tab:hover {
+    color: var(--color-bej);
+}
+.main1-tab::after{
+    position: absolute;
+    content: '';
+    width: 0%;
+    background-color: var(--color-bej);
+    height: 1px;
+    bottom: -7px;
+    transition: all 0.3s ease-in-out;
+    left: 50%;
+}
+.main1-tab:hover::after {
+    width: 100%;
+    left: 0;
+}
+.main1-tab.active {
+    color: var(--color-bej);
+}
+.main1-tab.active::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    background-color: var(--color-bej);
+    height: 1px;
+    bottom: -7px;
+    left: 0;
+}
+.slider-wrapper {
+    position: relative;
+}
+.slider-slide {
+    position: relative;
+    grid-template-columns: 445px 1fr;
+    column-gap: 50px;
+    grid-template-areas: 'a b'
+                         'c b';
+    display: none;
+}
+.slider-slide.active {
+    display: grid;
+}
+.main1-top {
+    grid-area: a;
+    margin-bottom: 20px;
+}
+.info {
+    grid-area: c;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.presentation {
+    grid-area: b;
+}
+.main1-title {
+    font-family: 'YesevaOne';
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 37px;
+    letter-spacing: -0.07em;
+    text-transform: uppercase;
+    color: var(--color-bej);
+    margin-bottom: 34px;
+}
+
+.main1-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    color: var(--color-white);
+}
+.main1-text span {
+    padding-left: 30px;
+}
+.info-blok-title {
+    font-family: 'YesevaOne';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: var(--color-bej);
+    margin-bottom: 10px;
+}
+.info-blok-text {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    color: var(--color-white);
+}
+
+.presentation {
+    max-width: 679px;
+    width: 100%;
+    max-height: 482px;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0;
+   
+}
+.slider-slide.active .presentation {
+    -webkit-animation: slidein .3s forwards; 
+    animation: visi 2s forwards;
+}
+@keyframes visi {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+.presentation img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.control-row {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    width: 200px;
+}
+.control-row .dots {
+    position: absolute;
+    left: 70px;
+    display: flex;
+}
+.control-row .dots span {
+    cursor: pointer;
+    display: inline-block;
+    min-width: 10px;
+    min-height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    margin: 0px 8px;
+    
+}
+.control-row .dots span.active {
+    background: #FFFFFF;
+}
+.arrow-prev {
+    cursor: pointer;
+    position: relative;
+}
+.arrow-prev::before {
+    position: absolute;
+    content: url('../img/arr-l.svg');
+}
+.arrow-next {
+    cursor: pointer;
+    position: relative;
+    left: 180px;
+}
+
+.arrow-next::before {
+    position: absolute;
+    content: url('../img/arr-r.svg');
+}
+.arrow-prev:hover::before,
+.arrow-next:hover::before,
+.control-row .dots span:hover {
+    transform: scale(1.1);
+}
+
